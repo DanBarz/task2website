@@ -19,35 +19,121 @@
         <a href="example.html">JAVASCRIPT </a>
       </nav>
     </header>
-    <h1>THIS IS WHERE WE ARE TESTING JAVASCRIPT</h1>
     <hr>
-    <a href="https://github.com/DanBarz/task2website/blob/main/src/test.js">CLICK HERE TO VIEW MY TASK 2 .JS FILE. REF VIDEO TO SEE RESULTS</a>
-    <hr>
-    <h2>We are testing REPLACE</h2>
-    <button onclick="replaceFunction()">CLICK TO GET RESULTS</button>
-    <p id="example">Wake up the dogs with blue, red, and pink collars!</p>
-    <hr>
-    <h2>We are testing LOCATE</h2>
-    <p>The position of the last occurrence of "locate" is:</p>
-
-    <p id="demo"></p>
-
-
-    <a href="index.html"><h1>BACK</h1></a>
+    <h1>We are testing REPLACE</h1>
     
-    <!-- <script type="module" src="/src/test.js"></script> -->
-    <script>
-    function replaceFunction() {
-      let text = document.getElementById("example").innerHTML; 
-      document.getElementById("example").innerHTML =
-      text.replace("pink","PURPLE");
-      
-      let text2 = "Please locate where 'the string' occurs!";
-      let index = text2.lastIndexOf("locate");
-      document.getElementById("demo").innerHTML = index;
-      console.log(index);
+    <p id="example">Wake up the dogs with blue, red, and pink collars!</p>
+    <button onclick="replaceFunction()">CLICK TO GET RESULTS</button>
+    <hr>
+    <h1>We are testing LOCATE</h1>
+    <p> "This is the string - Please locate where the last occurance of the string occurs!"</p>
+    <p>The position of the last occurrence of "the string" is: <span id="demo"></span></p>
+    <button onclick="locateFunction()">Find Last Occurrence</button>
+    <hr>
 
-    }
-    </script>
+    <h1>We are testing obtaining the index of a letter "W" Hello World</h1>
+    <p>The position of "W" is: <span id="demo2"></span></p>
+    <button onclick="helloWorld()">Output text to the page</button>
+    <hr>
+    
+    <h1>We are testing split array on the string Hello World</h1>
+    <p>This is the split array: <span id="demo3"></span></p>
+    <button onclick="splitArray()">Output result to the page</button>
+    <hr>
+    
+    <h1>We are testing changing from case to case</h1>
+    <p>Oh what a wonderful world we are living in!"</p>
+    <p>This is the result:</p>
+    <p id="demo4"></p>
+    <button onclick="changeCase()">Output result to the page</button>
+    <hr>
+   
+
+  
+    <a href="index.html"><h1>BACK</h1></a>
+    <h1>Other Examples</h1>
+    <script defer src="test.js"></script>
+    <h1><script>
+    
+
+    // Number methods
+    let num = 354.4526;
+
+    // 1. toFixed(): Formats the number to a specified number of decimal places.
+    let fixedNum = num.toFixed(2);
+
+    // 2. toPrecision(): Formats the number to a specified total length.
+    let precisionNum = num.toPrecision(6);
+
+    // 3. toString(): Converts the number to a string.
+    let strNum = num.toString();
+
+    // 4. parseInt(): Parses a string and returns an integer.
+    let intNum = parseInt("342");
+
+    // 5. parseFloat(): Parses a string and returns a floating-point number.
+    let floatNum = parseFloat("97.86534");
+
+    document.write("Original Number: " + num + "<br>");
+    document.write("Fixed to 2 decimal places: " + fixedNum + "<br>");
+    document.write("Precision of 6: " + precisionNum + "<br>");
+    document.write("Converted to String: " + strNum + "<br>");
+    document.write("Parsed Integer: " + intNum + "<br>");
+    document.write("Parsed Float: " + floatNum + "<br>");
+
+    // Array methods
+    let numbers = [10, 20, 30, 40];
+    let fruits = ["Apple", "Banana", "Cherry", "Date"];
+
+    // 1. push(): Adds elements to the end of an array.
+    numbers.push(55, 65);
+    fruits.push("Tomato");
+
+    // 2. pop(): Removes the last element from an array.
+    let poppedNumber = numbers.pop();
+    let poppedFruit = fruits.pop();
+
+    // 3. concat(): Joins two or more arrays.
+    let mergedArray = numbers.concat(fruits);
+
+    // 4. indexOf(): Returns the index of the first occurrence of a specified element.
+    let indexOfCherry = fruits.indexOf("Cherry");
+
+    // 5. includes(): Determines whether an array contains a specified element.
+    let includesBanana = fruits.includes("Banana");
+
+    document.write("Original Numbers Array: " + numbers + "<br>");
+    document.write("Popped Number: " + poppedNumber + "<br>");
+    document.write("Merged Array: " + mergedArray + "<br>");
+    document.write("Index of 'Cherry': " + indexOfCherry + "<br>");
+    document.write("Does the array include 'Banana'? " + includesBanana + "<br>");
+
+    // Date methods
+    let currentDate = new Date();
+
+    // 1. toDateString(): Converts the date to a human-readable string format.
+    let dateString = currentDate.toDateString();
+
+    // 2. toISOString(): Converts the date to an ISO string format.
+    let isoString = currentDate.toISOString();
+
+    // 3. getFullYear(): Returns the year of the date.
+    let year = currentDate.getFullYear();
+
+    // 4. getMonth(): Returns the month (0-11) of the date.
+    let month = currentDate.getMonth();
+
+    // 5. getDate(): Returns the day of the month (1-31) of the date.
+    let day = currentDate.getDate();
+
+    document.write("Current Date: " + currentDate + "<br>");
+    document.write("Date String: " + dateString + "<br>");
+    document.write("ISO String: " + isoString + "<br>");
+    document.write("Year: " + year + "<br>");
+    document.write("Month (0-11): " + month + "<br>");
+    document.write("Day of the Month: " + day + "<br>");
+    </script><h1>
+
+    
   </body>
 </html>
